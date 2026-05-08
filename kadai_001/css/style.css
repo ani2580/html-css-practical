@@ -1,0 +1,147 @@
+*{
+box-sizing: border-box/*「要素の幅（width）と高さ（height）に、パディング（内側の余白）とボーダー（枠線）を含める」 CSS プロパティ設定*/
+}
+
+body { /*Webページの表示領域全体にスタイルを適用する（フォント、余白、背景色など）*/
+  padding: 0px; /*borderと内容の間の内側余白を設定*/
+  margin:  0px; /*余白の設定　上　右　下　左*/
+  font-family: Noto Sans JP, sans-serif; /*Webサイトの書体を指定*/
+  font-size: 18px; /*文字の大きさの指定*/
+}
+
+p { /*Pタグ（段落）へスタイルを適応する*/
+  margin: 0; /*周囲の余白を全て０にする*/
+}
+
+/*ヘッダー*/
+.header-inner { /*ヘッダーの中身（ロゴ、ナビゲーション）を内側でグループ化し、レイアウトや余白を制御*/
+  display: flex; /*CSSでWebページのレイアウトを柔軟に制御する「フレックスボックス」を適用する*/
+  flex-wrap: wrap; /*入りきらない子要素を自動的に次の行へ折り返す（はみ出たアイテムが下段に移動する）*/
+  justify-content: space-between; /*Flexboxの子要素を両端に配置し、その間の余白を均等に分配*/
+  align-items: center; /*Flexboxの子要素を交差軸の中央に配置する*/
+  margin: 20px auto; /*余白を上下に20px　左右に自動（中央揃え）に設定*/
+  max-width: 960px; /*要素の横幅の最大値を960pxに制限*/
+}
+
+.header-inner a { /*.header-innerのクラスがついた要素内のすべてのリンク（<a>タグ）のスタイル指定　※個別に色、文字サイズ、装飾、ホバーエフェクトを指定*/
+  color: black; /*テキストの色を指定*/
+  font-weight: bold; /*テキストを太文字にする*/
+  text-decoration: none; /*テキストの下線、上線、取り消し線など装飾をすべて削除する*/
+}
+
+/*MyProfileの見出し部分*/
+h1 { /*h1（大見出し）タグのスタイル指定*/
+  margin: 0 0 0 20px; /*余白を左だけ20px*/
+  font-size: 34px;
+  border: 1px solid black; /*要素の周囲に「1pxの太さの実線で黒色」の枠線を表示*/
+  padding: 0px 20px; /*内容と実線の余白を上下は0　左右は20pxに指定*/
+}
+
+.home { /*クラス名がhomeに対してのスタイル指定*/
+  text-decoration: none;
+}
+
+/*ナビゲーションメニュー*/
+nav .menu { /*nav内のクラスがmenuに対してのスタイル指定*/
+  display: flex;
+  padding-left: 0; /*要素の左側の余白を０に指定*/
+}
+
+nav li { /*nav内のクラスがliに対してのスタイル指定*/
+  margin: 0 20px; /*内容と実線の余白を上下は0　左右は20pxに指定*/
+  list-style: none; /*ul.olの頭にある点（・）や数字を消す*/
+}
+
+nav a {  /*nav内のクラスがaに対してのスタイル指定*/
+  font-size: 34px; 
+}
+
+h2 { /*h2（大見出し）タグのスタイル指定*/
+  margin: 0;
+  padding: 60px 0 40px; /*borderと内容の余白を上60px左右0px下40pxに指定*/
+  text-align: center; /*(div,p,h1)の中にある（テキスト、画像、span）を水平方向に中央寄せする*/
+  font-size: 34px;
+}
+
+p,
+li { /*段落とリスト項目を一括でスタイル指定*/
+  font-size: 18px;
+}
+
+/*画像*/
+img { /*imgタグのスタイル指定*/
+  margin:  0 auto; /*余白を上下　0　左右　自動調整*/
+  width: 100%; /*要素の横幅を親要素のコンテンツ領域と同じ幅にする*/
+}
+
+/*About*/
+.about-inner { /*about内のクラスがinnerに対してのスタイル指定*/
+  padding: 10px; /*borderと内容の余白を上下左右10pxに指定*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto; /*余白を上下20px　左右　自動調整に指定*/
+  max-width: 960px;
+}
+
+/*名前*/
+.name { /*クラス名がnemeに対してのスタイル指定*/
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*丸く切り取る画像*/
+.circle { /*クラス名がcircleに対してのスタイル指定*/
+  border-radius: 50%;
+  width: 280px; /*要素の横幅を280pxに固定*/
+  height: 280px; /*高さを280pxに固定*/
+}
+
+/*プロフィールの説明部分*/
+.content { /*クラス名がcontentに対してのスタイル指定*/
+  margin: 0 auto; /*余白を上下0　左右　自動調整に指定*/
+  padding: 0 20px; /*borderと内容の余白を上下 0 左右20pxに指定*/
+}
+
+/*Works*/
+.works-inner { /*クラス名がworks-innerに対してのスタイル指定*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/*Worksの画像と説明部分*/
+.item { /*クラス名がitemに対してのスタイル指定*/
+  margin: 0 10px;
+  padding-bottom: 60px; /*下線の境界線に間に60pxの内部余白を追加*/
+  width: 25%;
+}
+
+/*フッター*/
+footer p { /*footer内のクラスがpに対してのスタイル指定*/
+  text-align: center;
+  padding-bottom: 20px; /*下線の境界線に間に20pxの内部余白を追加*/
+}
+
+/*横幅が767pxまでの場合*/
+@media (max-width:767px) { /*画面の横幅が767px以下のデバイスに対してのみCSSスタイルを適応するための設定*/
+  h1 {
+    font-size: 28px;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+
+  nav a {
+    font-size: 21px;
+  }
+
+  .item {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}
